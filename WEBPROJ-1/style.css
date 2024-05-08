@@ -50,9 +50,10 @@ body {
   width: 400px;
   background-color: rgba(45, 45, 161, 0.3);
   position: fixed;
+  pointer-events: none;
   border-radius: 50%;
   filter: blur(50px);
-  z-index: 9;
+  z-index: 1;
 }
 #nav h4 {
   font-weight: 500;
@@ -93,18 +94,23 @@ video {
 #page1 h1 {
   font-size: 140px;
   font-weight: 900;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
+  align-self: center;
+  user-select: none;
 }
-#page1 h1::before {
+/* #page1 h1::before {
   content: "ನಂದಿನಿ \00a0 \00a0 Nandini";
   position: absolute;
-  color: lightblue;
-  top: -5px;
-  left: -5px;
+  color: rgb(107, 147, 160);
+  top: -20px;
+  left: -20px;
   -webkit-text-stroke: 2px blue;
-}
+} */
+
 #page1 h2 {
   font-size: 30px;
   font-weight: 800;
@@ -138,6 +144,7 @@ video {
   animation-duration: 25s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  margin-bottom: 100px;
 }
 
 #scroller h4 {
@@ -147,11 +154,11 @@ video {
   margin-right: 50px;
   transition: all linear 0.5;
   color: transparent;
-  -webkit-text-stroke: 2px blue;
+  -webkit-text-stroke: 2px rgb(114, 114, 255);
 }
-#scroller h4:hover {
-  color: blue;
-}
+/* #scroller h4:hover {
+ color: rgb(40, 40, 220); 
+} */
 
 @keyframes scroll {
   from {
@@ -174,11 +181,12 @@ video {
   align-items: center;
   font-size: 23px;
   padding: 0 80px;
+  color: rgb(187, 187, 187);
 }
 #aboutus {
   height: 40vh;
   width: 100%;
-  background-color: rgba(25, 89, 207, 0.525);
+  /* background-color: rgba(203, 221, 255, 0.525); */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -244,27 +252,26 @@ video {
 .overlay {
   height: 100%;
   width: 100%;
-  background-color: darkblue;
-  padding-top: 80px;
-  border-radius: 20px;
-  display: flexbox;
-  flex-direction: column;
+  background-color: rgba(114, 182, 255, 0.9);
+
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
   opacity: 0;
   transition: all ease 0.6s;
+  color: black;
 }
 .overlay h4 {
-  color: lightblue;
-  font-size: 32px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 700;
   white-space: nowrap;
   margin-bottom: 20px;
 }
 .overlay p {
-  color: lightblue;
   font-size: 20px;
 }
 .card:hover .overlay {
@@ -275,11 +282,18 @@ video {
 }
 
 #container {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.9rem;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(to left, blue, aqua);
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 255, 0.691),
+    rgba(0, 255, 255, 0.443)
+  );
 }
 #container p {
   text-align: center;
