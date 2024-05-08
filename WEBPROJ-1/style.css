@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(173, 216, 230,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    gap: 15px;
+    position: fixed;
+    z-index: 99;
+}
+
+#logo{
+    height: 80%;
+    padding-left:20px;
+    padding-right: 50px;
+    
+}
+ #hmbtn{
+    height: 50%;
+    width: 45px;
+    padding-left: 5px;
+   
+ }
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(0,0,255,0.58);
+    position: fixed;
+    border-radius: 50%;
+    z-index: 99;
+}
+#curblr{
+    height: 400px;
+    width: 400px;
+    background-color: rgba(45, 45, 161, 0.5);
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 9;
+ 
+}
+ #nav h4{
+   font-weight: 500;
+   font-size: large;
+ }
+ #nav h4:hover{
+    
+    border:solid 3px blue;
+    scale: 1.1;
+   
+ }
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:fixed;
+}
+#main{
+    position:  relative;
+    background-color: rgba(0,0,0,0.37);
+   
+    
+
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+  position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: rgb(255, 255,255,0.65);
+   text-align: center;
+   z-index: 10;
+
+}
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    margin-top:10px;
+    margin-bottom: 20px;
+    position:relative;
+}
+#page1 h1::before{
+    content: "ನಂದಿನಿ \00a0 \00a0 Nandini";
+    position: absolute;
+    color:lightblue;
+    top: -5px;
+    left:-5px;
+    -webkit-text-stroke: 2px blue;
+  
+
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+}
+#page1 p{
+    font-size: 22px;
+    font-weight: 500;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+
+#page2{
+    min-height: 550px;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scrollerin{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller h4{
+    display: inline-block;
+    font-size: 140px;
+    font-weight: 900;
+    margin-right: 50px;
+    transition: all linear 0.5;
+    color: transparent;
+    -webkit-text-stroke: 2px blue;
+}
+#scroller h4:hover{
+    color: blue;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0)
+    }
+    to{
+        transform: translateX(-100%)
+    }
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#aboutus{
+    height: 40vh;
+    width: 100%;
+    background-color: rgba(25, 89, 207, 0.525);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    /* margin-top: 100px; */
+    position: relative;
+    z-index: 10;
+
+}
+#aboutus img{
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#aboutusin{
+    width: 40%;
+    text-align: center;
+    color: white;
+}
+
+#aboutusin h3{
+    font-size: 35px;
+    font-weight: 800;
+    /* margin-bottom: 40px; */
+}
+#aboutusin p{
+    font-size: 28px;
+    line-height: 50px;
+    /* color: white; */
+}
+#cards{
+    /* background-color: red; */
+    height: 60ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 80%;
+    width: 23%;
+    background-color: white;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image:url(card1.jpg);
+}
+#card2{
+    background-image:url(card2.png);
+}
+#card3{
+    background-image:url(card3.png);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: darkblue;
+    padding-top: 80px;
+    border-radius: 20px;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4{
+    color:lightblue;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+.overlay p{
+    color: lightblue;
+    font-size: 20px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,12deg);
+}
+
+#container{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to left,blue,aqua);
+    
+}
+#container p{
+    text-align: center;
+    font-size: larger;
+    color: white;
+}
+#container img{
+    height: 100%;
+    width: 40%;
+}
